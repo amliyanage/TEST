@@ -10,6 +10,7 @@ const headers = {
 };
 
 const UserService = {
+  createUser: (userData: User) => axios.post<User>(API_URL, userData, { headers }),
   getUsers: () => axios.get<User[]>(API_URL, { headers }),
 };
 
